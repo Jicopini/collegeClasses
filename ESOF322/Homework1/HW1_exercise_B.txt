@@ -1,0 +1,69 @@
+public class Company{
+	private String name[1];
+	private Address headquarters[1];
+	private Employee e;
+	private Customer cust;
+	private Truck t;
+	private Car car;
+	private Motorbike m;
+	private list<VehicleRentalService> v;
+}
+public interface iRentable{
+	public rent()
+}
+public class Truck inherits Vehicle{
+	private UnlimitedNatural weight[1];
+	private UnlimitedNatural power[1];
+	private String manufacturer[1];
+	private String regNo[1];
+}
+public class Car extends Vehicle{
+	private CarKind kind[1];
+	private UnlimitedNatural noSeats;
+	private UnlimitedNatural power[1];
+	private String manufacturer[1];
+	private String regNo[1];
+}
+public class Motorbike extends Vehicle{
+	private MbKind kind[1];
+	private UnlimitedNatural cylinderCap;
+	private UnlimitedNatural power[1];
+	private String manufacturer[1];
+	private String regNo[1];
+}
+public class Vehicle implements iRentable{
+	...
+}
+public class Person{
+	private String name;
+	private String email[1];
+	private Address a;
+}
+public class Employee extends person{
+	...
+}
+public class Address{
+	private String street[1];
+	private String postalCode[1];
+	private String city[1];
+}
+public class Customer extends person{{
+	private BankAccount b;
+}
+public class Subcontractor extends Employee and Customer{
+	...
+}
+public class BankAccount{
+	private UnlimitedNatural number[1];
+	private String depositor[1];
+	private String bank[1];
+}
+public class VehicleRentalService extends Service{
+	private Vehicle vehicle[1];
+	public offerCar(){}
+	public offerMotorbike(){}
+	public offerTruck(){}
+}
+public class Service{
+	private Customer customer[1];
+}
